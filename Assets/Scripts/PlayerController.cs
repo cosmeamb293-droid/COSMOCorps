@@ -19,6 +19,11 @@ public class PlayerController : MonoBehaviour
 
     public float velocidadDeLevantarse = 5f;
 
+    [Header("Configuración de Corrida en Pared")]
+    public LayerMask capaDeLaPared;
+    public float tiempoMaximoCorriendoEnLaPared = 3f;
+    public Color colorCorriendoEnLaPared = Color.blue;
+
     // Componentes y estado
         private Rigidbody rb;
         private Vector3 direccionDeInput;
@@ -29,6 +34,12 @@ public class PlayerController : MonoBehaviour
         private bool estaCorriendo = false;
         private float velocidadActual;
         private bool estaLevantandose = false;
+
+        private bool estaCorriendoEnLaPared = false;
+        private bool puedeCorrerEnLaPared = true;
+        private float tiempoCorriendoEnLaPared = 0f;
+        private Vector3 normalDeLaPared;
+        private Vector3 puntoDeLaPared;
     
         // Variables para el indicador visual
         private Renderer renderizadorDelPersonaje;
@@ -56,6 +67,20 @@ public class PlayerController : MonoBehaviour
             if (estaEnElSuelo && rb.linearVelocity.y <= 0)
             {
                 contadorDeSaltos = 0;
+                puedeCorrerEnLaPared = true;
+                if (estaCorriendoEnLaPared)
+                {
+                    DetenerCorridaEnLaPared();
+                }
+            }
+
+            if (estaCorriendoEnLaPared)
+            {
+                tiempoCorriendoEnLaPared += Time.deltaTime;
+                if (tiempoCorriendoEnLaPared > tiempoMaximoCorriendoEnLaPared)
+                {
+                    DetenerCorridaEnLaPared();
+                }
             }
     
             // Input de movimiento (WASD)
@@ -76,13 +101,17 @@ public class PlayerController : MonoBehaviour
             // Input de salto (Barra espaciadora)
             if (Input.GetButtonDown("Jump") && !estaLevantandose)
             {
-                if (estaEnElSuelo)
+                if (estaCorriendoEnLaPared)
+                {
+                    SaltarDeLaPared();
+                }
+                else if (estaEnElSuelo)
                 {
                     Saltar(fuerzaDeSalto);
                 }
-                else if (contadorDeSaltos < 2)
+                else if (contadorDeSaltos < 1)
                 {
-                    Saltar(fuerzaDeSalto / 2);
+                    Saltar(fuerzaDeSalto);
                 }
             }
     
@@ -104,28 +133,61 @@ public class PlayerController : MonoBehaviour
     
         void FixedUpdate()
         {
-            // Si hay input de movimiento, calcula la dirección relativa a la cámara
-            if (direccionDeInput.magnitude >= 0.1f)
+            Vector3 camForward = Vector3.Scale(camara.forward, new Vector3(1, 0, 1)).normalized;
+            Vector3 direccionDeMovimiento = direccionDeInput.z * camForward + direccionDeInput.x * camara.right;
+
+            if (!estaEnElSuelo && puedeCorrerEnLaPared && direccionDeInput.magnitude > 0.1f && ChequearPared(direccionDeMovimiento))
             {
-                // --- CÁLCULO DE DIRECCIÓN RELATIVA A LA CÁMARA ---
-                Vector3 camForward = Vector3.Scale(camara.forward, new Vector3(1, 0, 1)).normalized;
-                Vector3 direccionDeMovimiento = direccionDeInput.z * camForward + direccionDeInput.x * camara.right;
-    
-                // --- ROTACIÓN DEL PERSONAJE ---
-                if (!estaLevantandose)
+                IniciarCorridaEnLaPared();
+            }
+
+            if (estaCorriendoEnLaPared)
+            {
+                if (!ChequearPared(direccionDeMovimiento) || rb.linearVelocity.magnitude < 0.1f)
                 {
-                    Quaternion nuevaRotacion = Quaternion.LookRotation(direccionDeMovimiento);
-                    rb.rotation = Quaternion.Slerp(rb.rotation, nuevaRotacion, Time.fixedDeltaTime * velocidadDeRotacion);
+                    DetenerCorridaEnLaPared();
+                    return;
                 }
-    
-                // --- MOVIMIENTO DEL PERSONAJE ---
-                Vector3 nuevaVelocidad = direccionDeMovimiento * velocidadActual;
-                rb.linearVelocity = new Vector3(nuevaVelocidad.x, rb.linearVelocity.y, nuevaVelocidad.z);
+
+                Vector3 direccionDeCorrida = Vector3.Cross(normalDeLaPared, Vector3.up).normalized;
+                float alineacion = Vector3.Dot(direccionDeCorrida, transform.forward);
+                if (alineacion < 0)
+                {
+                    direccionDeCorrida = -direccionDeCorrida;
+                }
+
+                // Allow player to influence movement
+                rb.linearVelocity = (direccionDeCorrida + direccionDeMovimiento * 0.5f).normalized * velocidadActual;
+                rb.AddForce(normalDeLaPared * 20f);
             }
             else
             {
-                // Si no hay input, el personaje deja de deslizarse y se endereza
-                rb.linearVelocity = new Vector3(0f, rb.linearVelocity.y, 0f);
+                rb.useGravity = true;
+                // Si hay input de movimiento, calcula la dirección relativa a la cámara
+                if (direccionDeInput.magnitude >= 0.1f)
+                {
+                    // --- CÁLCULO DE DIRECCIÓN RELATIVA A LA CÁMARA ---
+        
+                    // --- ROTACIÓN DEL PERSONAJE ---
+                    if (!estaLevantandose)
+                    {
+                        Quaternion nuevaRotacion = Quaternion.LookRotation(direccionDeMovimiento);
+                        rb.rotation = Quaternion.Slerp(rb.rotation, nuevaRotacion, Time.fixedDeltaTime * velocidadDeRotacion);
+                    }
+        
+                    // --- MOVIMIENTO DEL PERSONAJE ---
+                    Vector3 nuevaVelocidad = direccionDeMovimiento * velocidadActual;
+                    rb.linearVelocity = new Vector3(nuevaVelocidad.x, rb.linearVelocity.y, nuevaVelocidad.z);
+                }
+                else
+                {
+                    // Si no hay input, el personaje deja de deslizarse y se endereza
+                    rb.linearVelocity = new Vector3(0f, rb.linearVelocity.y, 0f);
+                }
+            }
+
+            if (estaEnElSuelo)
+            {
                 EnderezarPersonaje();
             }
         }
@@ -192,11 +254,77 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(0.5f); // Duración del impulso
     }
 
-    void Saltar(float fuerza)
+    public void Saltar(float fuerza)
     {
         rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
         rb.AddForce(Vector3.up * fuerza, ForceMode.Impulse);
         contadorDeSaltos++;
+    }
+
+    public void ResetearContadorDeSaltos()
+    {
+        contadorDeSaltos = 0;
+    }
+
+    public void EstablecerContadorDeSaltos(int valor)
+    {
+        contadorDeSaltos = valor;
+    }
+
+    void DetenerCorridaEnLaPared()
+    {
+        estaCorriendoEnLaPared = false;
+        rb.useGravity = true;
+        if (renderizadorDelPersonaje != null)
+        {
+            renderizadorDelPersonaje.material.color = colorOriginal;
+        }
+        puedeCorrerEnLaPared = false;
+    }
+
+    void SaltarDeLaPared()
+    {
+        DetenerCorridaEnLaPared();
+        rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
+        rb.AddForce(normalDeLaPared * fuerzaDeSalto * 1.5f, ForceMode.Impulse);
+        rb.AddForce(Vector3.up * fuerzaDeSalto, ForceMode.Impulse);
+        puedeCorrerEnLaPared = false;
+    }
+
+    bool ChequearPared(Vector3 direccionDeMovimiento)
+    {
+        RaycastHit hit;
+        float radioEsfera = 0.5f;
+        float distanciaDeteccion = 1f;
+
+        // Lanzar una esfera en la dirección del movimiento para detectar paredes
+        if (Physics.SphereCast(transform.position, radioEsfera, direccionDeMovimiento, out hit, distanciaDeteccion, capaDeLaPared))
+        {
+            // Asegurarse de que no estamos detectando el suelo como una pared
+            if (Vector3.Angle(hit.normal, Vector3.up) > 80f)
+            {
+                // Additional check to make sure it's not a ground object
+                if ((capaDelSuelo.value & (1 << hit.collider.gameObject.layer)) == 0)
+                {
+                    normalDeLaPared = -hit.normal;
+                    puntoDeLaPared = hit.point;
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    void IniciarCorridaEnLaPared()
+    {
+        estaCorriendoEnLaPared = true;
+        rb.useGravity = false;
+        tiempoCorriendoEnLaPared = 0f;
+        rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
+        if (renderizadorDelPersonaje != null)
+        {
+            renderizadorDelPersonaje.material.color = colorCorriendoEnLaPared;
+        }
     }
 
     void OnDrawGizmosSelected()
