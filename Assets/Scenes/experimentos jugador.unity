@@ -1674,7 +1674,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   tiempoMaximoCorriendoEnLaPared: 3
-  colorCorriendoEnLaPared: {r: 0, g: 0, b: 1, a: 1}
+  colorCorriendoEnLaPared: {r: 0.0067950487, g: 1, b: 0, a: 1}
 --- !u!1001 &3423107799338306162
 PrefabInstance:
   m_ObjectHideFlags: 0
