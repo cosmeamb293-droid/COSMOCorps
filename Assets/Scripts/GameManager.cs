@@ -106,6 +106,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void IniciarJuego()
+    {
+        SceneManager.LoadScene("Nivel No.1");
+    }
+
     // --- MÉTODOS PRIVADOS ---
 
     private void ActualizarPuntaje(int nuevoPuntaje)
