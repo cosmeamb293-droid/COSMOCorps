@@ -1357,6 +1357,73 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -43.318, z: 0}
+--- !u!1 &1764505125
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1764505128}
+  - component: {fileID: 1764505127}
+  - component: {fileID: 1764505126}
+  m_Layer: 0
+  m_Name: Zona de victoria
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1764505126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1764505125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5d3089172fcc0e42b0164bea006593d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VictoriaTrigger
+  nombreDeLaEscenaDeVictoria: Ganaste
+--- !u!65 &1764505127
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1764505125}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1764505128
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1764505125}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 23.52, y: 0.85, z: 5.39}
+  m_LocalScale: {x: 3.7666, y: 8.752071, z: 3.7666}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1774513538
 GameObject:
   m_ObjectHideFlags: 0
@@ -1579,6 +1646,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &2103419490 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1103959905846677133, guid: fe62bb9e8436cb64da7a637f34bb8b2c, type: 3}
+  m_PrefabInstance: {fileID: 3423107799338306162}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2113291324 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3080440268501585253, guid: fe62bb9e8436cb64da7a637f34bb8b2c, type: 3}
@@ -1644,6 +1716,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3550938629339532048, guid: fe62bb9e8436cb64da7a637f34bb8b2c, type: 3}
+      propertyPath: camara
+      value: 
+      objectReference: {fileID: 432918476}
+    - target: {fileID: 3550938629339532048, guid: fe62bb9e8436cb64da7a637f34bb8b2c, type: 3}
+      propertyPath: chequeadorDeSuelo
+      value: 
+      objectReference: {fileID: 2103419490}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1667,3 +1747,4 @@ SceneRoots:
   - {fileID: 710608965}
   - {fileID: 1613137301}
   - {fileID: 200955584}
+  - {fileID: 1764505128}
