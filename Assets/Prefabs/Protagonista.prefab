@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 2289430607801818864}
   - component: {fileID: 1698814832722038242}
   - component: {fileID: 1865312697200240993}
-  - component: {fileID: 2675614573857382986}
+  - component: {fileID: 5583366054828267414}
   m_Layer: 0
   m_Name: Protagonista
   m_TagString: Player
@@ -125,8 +125,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.09000001, y: 0.09000001, z: 0.09000001}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2901466315659599691}
   - {fileID: 2506451853689178157}
@@ -189,7 +189,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &2675614573857382986
+--- !u!136 &5583366054828267414
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -814,7 +814,7 @@ Transform:
   m_GameObject: {fileID: 5775195535288411749}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18.8, y: -0.049999982, z: -3.4}
+  m_LocalPosition: {x: 18.28, y: -0.049999982, z: -2.44}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1301,7 +1301,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: c501a2b3a1d961b479cf85dec70c1e5f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.199066
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c501a2b3a1d961b479cf85dec70c1e5f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1309,7 +1309,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c501a2b3a1d961b479cf85dec70c1e5f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.3807098
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c501a2b3a1d961b479cf85dec70c1e5f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1346,8 +1346,39 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c501a2b3a1d961b479cf85dec70c1e5f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 905624922844160892}
   m_SourcePrefab: {fileID: 100100000, guid: c501a2b3a1d961b479cf85dec70c1e5f, type: 3}
+--- !u!1 &1528615295933245721 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c501a2b3a1d961b479cf85dec70c1e5f, type: 3}
+  m_PrefabInstance: {fileID: 1871195422582199368}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &905624922844160892
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528615295933245721}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 10.09, z: 0}
 --- !u!4 &2197030046506693539 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c501a2b3a1d961b479cf85dec70c1e5f, type: 3}
