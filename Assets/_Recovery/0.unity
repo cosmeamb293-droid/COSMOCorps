@@ -509,6 +509,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pared para correr
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3b097828d69b0384799fb5f855e931ed, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -540,7 +544,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1698814832722038242, guid: f57a99633082893468a7ad284e80544e, type: 3}
       propertyPath: capaDeLaPared.m_Bits
-      value: 128
+      value: 384
       objectReference: {fileID: 0}
     - target: {fileID: 2289430607801818864, guid: f57a99633082893468a7ad284e80544e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -584,15 +588,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2901466315659599691, guid: f57a99633082893468a7ad284e80544e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.01
+      value: 0.06
       objectReference: {fileID: 0}
     - target: {fileID: 2901466315659599691, guid: f57a99633082893468a7ad284e80544e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.56
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: 2901466315659599691, guid: f57a99633082893468a7ad284e80544e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.3
+      value: -0.18
       objectReference: {fileID: 0}
     - target: {fileID: 5583366054828267414, guid: f57a99633082893468a7ad284e80544e, type: 3}
       propertyPath: m_Height
