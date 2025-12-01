@@ -95,12 +95,738 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: BOTJUMP UI 2_0
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 884
+        width: 284
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d0adcab1e790774abff30a26fa81031
+      internalID: 2000888494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOTJUMP UI 2_1
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 872
+        width: 668
+        height: 137
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e77fa93ed2b6604f80dd8202d1d2d88
+      internalID: -13103074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOTJUMP UI 2_2
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 717
+        width: 283
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 229e8c5429d280743aa9b435f60bc8c8
+      internalID: -1694908096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOTJUMP UI 2_3
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 707
+        width: 668
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9902cea4d93b2f2498fbd7a429f9cdfc
+      internalID: -1984437841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOTJUMP UI 2_4
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 559
+        width: 253
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69f84298bf994ce4bb1db14fce2dec3b
+      internalID: -106634818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOTJUMP UI 2_7
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 613
+        width: 295
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37b95db05a610e44c9f6519793a9e2f9
+      internalID: -2043117849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOTJUMP UI 2_8
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 611
+        width: 45
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b6a237d0f20e5344a2c0418ea87f32d
+      internalID: 885017850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOTJUMP UI 2_9
+      rect:
+        serializedVersion: 2
+        x: 766
+        y: 613
+        width: 205
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9adbb5a95c05e6f4eb727e5181030c40
+      internalID: 1384640846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOTJUMP UI 2_10
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 573
+        width: 179
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b67b2be861167345b07743b5bb032d9
+      internalID: -960470331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOTJUMP UI 2_11
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 509
+        width: 579
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0256f1e93a1fa5940ae14b2f3fcef9bc
+      internalID: -1763363032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOTJUMP UI 2_12
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 440
+        width: 261
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a50a2a619c53ed44ba1568c5b13dc53
+      internalID: -832037759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOTJUMP UI 2_13
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 489
+        width: 59
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f17dd2947e07f124a97294736099062b
+      internalID: -275814688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOTJUMP UI 2_14
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 491
+        width: 70
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47a5de0195b23374e92d98820a636bf2
+      internalID: 281383163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOTJUMP UI 2_15
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 280
+        width: 231
+        height: 225
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b9739ea2f1aed443a94edaae2c9c3ed
+      internalID: 3736270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOTJUMP UI 2_16
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 578
+        width: 27
+        height: 9
+      alignment: 9
+      pivot: {x: 0.5544777, y: 0.48673862}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80eb25d6740372d408eec0bab7a7b05b
+      internalID: 1669353468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOTJUMP UI 2_17
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 297
+        width: 127
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4b37737508be5f49a1498b65bc22a38
+      internalID: -921626157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOTJUMP UI 2_19
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 303
+        width: 349
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7dee1149b48b8e469288ad982819058
+      internalID: -1512931120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOTJUMP UI 2_20
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 363
+        width: 100
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30853ae1b8a3f4c42b253c34a575dbc4
+      internalID: 479660908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOTJUMP UI 2_21
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 362
+        width: 100
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a5ae74060615244ab27f4628ccc0a86
+      internalID: -1080637044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOTJUMP UI 2_23
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 363
+        width: 82
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92d677c87dfb1024d81e5dbfe1ef2d7a
+      internalID: 2035508085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOTJUMP UI 2_27
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 153
+        width: 256
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10395bedaf443a74fbdb2e0be9624d9a
+      internalID: -1409330374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOTJUMP UI 2_28
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 151
+        width: 329
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 383472547b9bb6a4d9d54a7e9e28d94a
+      internalID: -1479387648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOTJUMP UI 2_31
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 220
+        width: 288
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c31d30f4dfbebf44f92b3f3f222bd6b7
+      internalID: 1329931928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOTJUMP UI 2_33
+      rect:
+        serializedVersion: 2
+        x: 885
+        y: 118
+        width: 97
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fe7aff701479244fa2dc9e66ea5aee2
+      internalID: -1412840516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOTJUMP UI 2_34
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 67
+        width: 206
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85962c329cd56274aaa8801254f52da9
+      internalID: -450405842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOTJUMP UI 2_35
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 57
+        width: 66
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a70d1dbdba8ca6049aab626789d8e964
+      internalID: -437289884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOTJUMP UI 2_36
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 55
+        width: 66
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c340f33058578c45b18d4ab9bc49cc6
+      internalID: 118063444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOTJUMP UI 2_37
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 60
+        width: 60
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84a3b2928d03cc444856802be48019dd
+      internalID: 1069890538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOTJUMP UI 2_38
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 33
+        width: 183
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e1d8f21548877143a144bdcfdab85f6
+      internalID: -258436514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOTJUMP UI 2_39
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 19
+        width: 139
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14f60d3b21d87d849b4cb70b8e9be7b3
+      internalID: 253365898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOTJUMP UI 2_40
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 11
+        width: 108
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4563b88fbfe43fa45ba25b2ca1b80f56
+      internalID: -457000748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOTJUMP UI 2_24
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 22
+        width: 209
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2a1e28904fcd5e4d89c77cc665f9c28
+      internalID: 1867141101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOTJUMP UI 2_5
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 361
+        width: 12
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90e991fb939083842a4883bf2ff2cacb
+      internalID: -1845746668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: f1bdcb3e41dfc8e46a9110d5aeb57dfc
     internalID: 0
     vertices: []
     indices: 
@@ -108,8 +834,51 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
-    nameFileIdTable: {}
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      BOTJUMP UI 2_0: 2000888494
+      BOTJUMP UI 2_1: -13103074
+      BOTJUMP UI 2_10: -960470331
+      BOTJUMP UI 2_11: -1763363032
+      BOTJUMP UI 2_12: -832037759
+      BOTJUMP UI 2_13: -275814688
+      BOTJUMP UI 2_14: 281383163
+      BOTJUMP UI 2_15: 3736270
+      BOTJUMP UI 2_16: 1669353468
+      BOTJUMP UI 2_17: -921626157
+      BOTJUMP UI 2_18: 874648133
+      BOTJUMP UI 2_19: -1512931120
+      BOTJUMP UI 2_2: -1694908096
+      BOTJUMP UI 2_20: 479660908
+      BOTJUMP UI 2_21: -1080637044
+      BOTJUMP UI 2_22: -117282613
+      BOTJUMP UI 2_23: 2035508085
+      BOTJUMP UI 2_24: 1867141101
+      BOTJUMP UI 2_25: 2020645309
+      BOTJUMP UI 2_26: -483713908
+      BOTJUMP UI 2_27: -1409330374
+      BOTJUMP UI 2_28: -1479387648
+      BOTJUMP UI 2_29: -322783221
+      BOTJUMP UI 2_3: -1984437841
+      BOTJUMP UI 2_30: 1614731168
+      BOTJUMP UI 2_31: 1329931928
+      BOTJUMP UI 2_32: 337698443
+      BOTJUMP UI 2_33: -1412840516
+      BOTJUMP UI 2_34: -450405842
+      BOTJUMP UI 2_35: -437289884
+      BOTJUMP UI 2_36: 118063444
+      BOTJUMP UI 2_37: 1069890538
+      BOTJUMP UI 2_38: -258436514
+      BOTJUMP UI 2_39: 253365898
+      BOTJUMP UI 2_4: -106634818
+      BOTJUMP UI 2_40: -457000748
+      BOTJUMP UI 2_5: -1845746668
+      BOTJUMP UI 2_6: 454050543
+      BOTJUMP UI 2_7: -2043117849
+      BOTJUMP UI 2_8: 885017850
+      BOTJUMP UI 2_9: 1384640846
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
