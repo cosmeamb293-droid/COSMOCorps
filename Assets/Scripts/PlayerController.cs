@@ -29,6 +29,11 @@ public class PlayerController : MonoBehaviour
         private Vector3 direccionDeInput;
         private bool estaEnElSuelo;
         private int contadorDeSaltos = 0;
+
+        // Propiedades públicas para el Animator
+        public float CurrentSpeed { get; private set; }
+        public bool IsJumping { get; private set; }
+        public bool IsGrounded { get; private set; }
     
         private float velocidadDeCarrera;
         private bool estaCorriendo = false;
@@ -64,10 +69,15 @@ public class PlayerController : MonoBehaviour
             // --- MANEJO DE INPUTS ---
             estaEnElSuelo = Physics.CheckSphere(chequeadorDeSuelo.position, radioDelChequeador, capaDelSuelo);
     
+            // Actualizar propiedades públicas para el Animator
+            IsGrounded = estaEnElSuelo;
+            CurrentSpeed = new Vector3(rb.linearVelocity.x, 0, rb.linearVelocity.z).magnitude;
+
             if (estaEnElSuelo && rb.linearVelocity.y <= 0)
             {
                 contadorDeSaltos = 0;
                 puedeCorrerEnLaPared = true;
+                IsJumping = false; // Resetea IsJumping cuando está en el suelo
                 if (estaCorriendoEnLaPared)
                 {
                     DetenerCorridaEnLaPared();
@@ -101,6 +111,8 @@ public class PlayerController : MonoBehaviour
             // Input de salto (Barra espaciadora)
             if (Input.GetButtonDown("Jump") && !estaLevantandose)
             {
+                IsJumping = true; // Activa IsJumping en el frame que salta
+
                 if (estaCorriendoEnLaPared)
                 {
                     SaltarDeLaPared();
