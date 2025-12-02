@@ -111,6 +111,22 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Nivel No.1");
     }
 
+    public void CargarCreditos()
+    {
+        SceneManager.LoadScene("Creditos");
+    }
+
+    public void CargarMenuPrincipal()
+    {
+        SceneManager.LoadScene("Menu principal");
+    }
+
+    // --- MÉTODO GENÉRICO PARA CARGAR ESCENAS ---
+    public void LoadScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    }
+
     // --- MÉTODOS PRIVADOS ---
 
     private void ActualizarPuntaje(int nuevoPuntaje)
