@@ -72,12 +72,12 @@ public class PlayerController : MonoBehaviour
             // Actualizar propiedades públicas para el Animator
             IsGrounded = estaEnElSuelo;
             CurrentSpeed = new Vector3(rb.linearVelocity.x, 0, rb.linearVelocity.z).magnitude;
+            IsJumping = !estaEnElSuelo; // Si no está en el suelo, está saltando/cayendo
 
             if (estaEnElSuelo && rb.linearVelocity.y <= 0)
             {
                 contadorDeSaltos = 0;
                 puedeCorrerEnLaPared = true;
-                IsJumping = false; // Resetea IsJumping cuando está en el suelo
                 if (estaCorriendoEnLaPared)
                 {
                     DetenerCorridaEnLaPared();
@@ -111,8 +111,6 @@ public class PlayerController : MonoBehaviour
             // Input de salto (Barra espaciadora)
             if (Input.GetButtonDown("Jump") && !estaLevantandose)
             {
-                IsJumping = true; // Activa IsJumping en el frame que salta
-
                 if (estaCorriendoEnLaPared)
                 {
                     SaltarDeLaPared();
